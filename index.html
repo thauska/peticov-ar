@@ -13,10 +13,10 @@
 </head>
 
 <body style="margin:0px; overflow:hidden;">
-    <a-scene arjs='sourceType: webcam;'>
+    <a-scene arjs='sourceType: webcam; trackingMethod: best; debugUIEnabled: false'>
         <a-anchor>
             <!-- define the content to be displayed on top of the marker -->
-            <a-plane src="assets/labirinto.jpg" width="10" height="11" rotation="-75 0 0" position="4 -1 -1.5"></a-plane>
+            <a-plane src="assets/rainbow-fields.jpg" width="9" height="10" rotation="-75 0 0" position="4 -1 -1.5"></a-plane>
         </a-anchor>
 
         <a-camera-static />
