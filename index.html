@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Peticov AR</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <!-- AR.js stuff-->
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
@@ -17,7 +16,7 @@
     <a-scene arjs='sourceType: webcam;'>
         <a-anchor>
             <!-- define the content to be displayed on top of the marker -->
-            <a-plane src="assets/labirinto.jpg" width="6" height="8" rotation="-95 0 0" position="3.5 -1 -1"></a-plane>
+            <a-plane src="assets/labirinto.jpg" width="8" height="10" rotation="-95 0 0" position="3.8 -1 -1.5"></a-plane>
         </a-anchor>
 
         <a-camera-static />
