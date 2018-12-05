@@ -13,10 +13,13 @@
 </head>
 
 <body style="margin:0px; overflow:hidden;">
-    <a-scene antialias="true" arjs='sourceType: webcam; trackingMethod: best; debugUIEnabled: false'>
+    <a-scene antialias="true" embedded arjs='sourceType: webcam; trackingMethod: best; debugUIEnabled: false'>
         <a-anchor>
-            <!-- define the content to be displayed on top of the marker -->
-            <a-plane src="assets/labirinto.jpg" width="7.6" height="9.6" rotation="-90 0 0" position="4.5 0 -2"></a-plane>
+            <a-plane src="assets/labirinto.jpg" width="7.6" height="9.6" rotation="-90 0 0" position="4.5 0 -2">
+            </a-plane>
+
+            <a-text value="Labirinto de Antonio Peticov" color="black" width="3" position="-1 0.5 -1" rotation="-90 0 0"></a-text>
+            
         </a-anchor>
 
         <a-camera-static />
