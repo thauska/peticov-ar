@@ -8,6 +8,7 @@
     <!-- AR.js stuff-->
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-ar.js"></script>
+    <link rel="stylesheet" type="text/css" href="mondrian.css">
     <!-- end AR.js specific scripts -->
     <style>
         .a-enter-vr-button {
@@ -19,14 +20,52 @@
 </head>
 
 <body style="margin:0px; overflow:hidden;">
-    <a-scene antialias="true" embedded arjs='sourceType: webcam; trackingMethod: best; debugUIEnabled: false'>
 
-        <a-marker id='lab-cite' type='pattern' url='marker/pt-cite.patt'>
+
+    <a-scene antialias="true" embedded arjs='sourceType: webcam; trackingMethod: best; debugUIEnabled: false'>
+        <!-- Labirinto -->
+        <a-marker id='cite' type='pattern' url='marker/pt-cite.patt'>
             <a-plane src="assets/labirinto.jpg" width="7" height="7" rotation="-90 0 0" position="5 0 -2">
             </a-plane>
-
             <a-text value="Labirinto 
-            de Antonio Peticov" color="black" width="4" position="-1 0.5 -1" rotation="-90 0 0"></a-text>
+            de Antonio Peticov" color="black" width="4" position="-1 0.5 -1"
+                rotation="-90 0 0"></a-text>
+        </a-marker>
+
+        <!---->
+        <a-marker id='frac1' type='pattern' url='marker/pt-frac1.patt'>
+            <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:green;'>
+                <a-torus-knot radius='0.26' radius-tubular='0.05'>
+                    <a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+                </a-torus-knot>
+            </a-box>
+        </a-marker>
+
+        <!---->
+        <a-marker id='frac2' type='pattern' url='marker/pt-frac2.patt'>
+            <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:blue;'>
+                <a-torus-knot radius='0.26' radius-tubular='0.05'>
+                    <a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+                </a-torus-knot>
+            </a-box>
+        </a-marker>
+
+        <!---->
+        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt'>
+            <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>
+                <a-torus-knot radius='0.26' radius-tubular='0.05'>
+                    <a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+                </a-torus-knot>
+            </a-box>
+        </a-marker>
+
+        <!-- Disponibilitá -->
+        <a-marker id='frac4' type='pattern' url='marker/pt-frac4.patt'>
+            <a-plane src="assets/disponibilita2.jpg" width="7" height="10" rotation="-90 0 0" position="0 0 -6">
+            </a-plane>
+            <a-text value="Disponibilita
+            de Antonio Peticov" color="black" width="4" position="0 0.5 4"
+                rotation="-90 0 0"></a-text>
         </a-marker>
 
         <a-camera-static />
