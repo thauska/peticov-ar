@@ -8,7 +8,6 @@
     <!-- AR.js stuff-->
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-ar.js"></script>
-    <link rel="stylesheet" type="text/css" href="mondrian.css">
     <!-- end AR.js specific scripts -->
     <style>
         .a-enter-vr-button {
@@ -21,8 +20,16 @@
 
 <body style="margin:0px; overflow:hidden;">
 
+    <div style='position:fixed; top: 10px; left: 20px; width:100%; text-align: left; z-index: 1;'>
+        <img src="images/Logo_festma.png" alt="Logo do Festival de Matemática e Arte" height="40">
+        <br />
+        <strong>Created with A-Frame & AR.js</strong>
 
-    <a-scene antialias="true" embedded arjs='sourceType: webcam; trackingMethod: best; debugUIEnabled: false'>
+    </div>
+
+
+
+    <a-scene antialias="true" embedded arjs='sourceType: webcam; trackingMethod: best; debugUIEnabled: false;'>
         <!-- Labirinto -->
         <a-marker id='cite' type='pattern' url='marker/pt-cite.patt'>
             <a-plane src="assets/labirinto.jpg" width="7" height="7" rotation="-90 0 0" position="5 0 -2">
@@ -61,7 +68,7 @@
 
         <!-- Disponibilitá -->
         <a-marker id='frac4' type='pattern' url='marker/pt-frac4.patt'>
-            <a-plane src="assets/disponibilita2.jpg" width="7" height="10" rotation="-90 0 0" position="0 0 -6">
+            <a-plane src="assets/disponibilita_trans.png" width="7" height="10" rotation="-90 0 0" position="5 0 0">
             </a-plane>
             <a-text value="Disponibilita
             de Antonio Peticov" color="black" width="4" position="0 0.5 4"
