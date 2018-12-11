@@ -1,18 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Language" content="pt-br">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Peticov AR</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Festival de Matemática e Arte 2018</title>
     <!-- AR.js stuff-->
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-ar.js"></script>
+    <script src="js/threex-portal-door.js"></script>
+    <script src="js/aframe-portal-door.js"></script>
     <!-- end AR.js specific scripts -->
+
+    <script>
+        AFRAME.registerComponent('vidhandler', {
+        // ...
+        init: function () {
+        // Set up initial state and variables.
+            this.toggle = false;
+            this.vid = document.querySelector("#vid")
+            this.vid.pause();
+            },
+            tick:function(){
+                
+            if(this.el.object3D.visible == true){
+              if(!this.toggle){
+                 this.toggle = true;
+                 this.vid.play();
+                }
+              }else{
+              this.toggle = false;
+                this.vid.pause();
+                }
+              }
+            });
+    </script>
+
+
+
     <style>
-        .a-enter-vr-button {
+        .a-enter-vr {
             visibility: hidden;
 
+        }
+        .container{
+            display: flex;
+            }
+        .fixed{
+            width: 100px;
+            }
+        .flex-item{
+            flex-grow: 1;
+            }
+        div {
+            height:50px;
+            width:100%;
         }
     </style>
 
@@ -20,63 +64,66 @@
 
 <body style="margin:0px; overflow:hidden;">
 
-    <div style='position:fixed; top: 10px; left: 20px; width:100%; text-align: left; z-index: 1;'>
-        <img src="images/Logo_festma.png" alt="Logo do Festival de Matemática e Arte" height="40">
-        <br />
-        <strong>Created with A-Frame & AR.js</strong>
+    <div style='position:fixed; top: 10px; left: 20px; text-align: left; z-index: 1;'>
+        <div class="container">
+            <div class="fixed">
+                <img src="images/Logo_festma.png" alt="Logo do Festival de Matemática e Arte" height="70%">
+            </div>
+            <div class="flex-item" style="position:fixed; bottom: 5px; left: 20px; z-index: -1">
+                <h5><strong>VR & AR + Web technologies = ❤</strong></h5>
 
+            </div>
+        </div>
     </div>
 
 
 
     <a-scene antialias="true" embedded arjs='sourceType: webcam; trackingMethod: best; debugUIEnabled: false;'>
-        <!-- Labirinto -->
+        <!-- quadrado -->
         <a-marker id='cite' type='pattern' url='marker/pt-cite.patt'>
-            <a-plane src="assets/labirinto.jpg" width="7" height="7" rotation="-90 0 0" position="5 0 -2">
+            <a-plane src="assets/quadrado-magico-kami.jpg" scale="7.3 7.3 7.3" rotation="-90 0 0" position="0 0 -3">
             </a-plane>
-            <a-text value="Labirinto 
-            de Antonio Peticov" color="black" width="4" position="-1 0.5 -1"
+
+            <a-plane color="white" width="3" position="-8 0.5 -1" rotation="-90 0 0"></a-plane>
+            <a-text value="Obra: Quadrado Magico 
+            Antonio Peticov" align="center" color="black" width="5" position="-8 0.8 -1"
                 rotation="-90 0 0"></a-text>
         </a-marker>
 
-        <!---->
+        <!--Disponibilitá-->
         <a-marker id='frac1' type='pattern' url='marker/pt-frac1.patt'>
-            <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:green;'>
-                <a-torus-knot radius='0.26' radius-tubular='0.05'>
-                    <a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-                </a-torus-knot>
-            </a-box>
+            <a-plane color="white" width="3" position="4.5 1 0" rotation="-90 0 0"></a-plane>
+            <a-text value="Obra: “Disponibilita.” ( 1981)
+            Antonio Peticov" align="center" color="black"
+                width="5" position="4.5 1.1 0" rotation="-90 0 0"></a-text>
+
+            <a-plane src="assets/disponibilita.jpg" width="3.8" height="5.1" rotation="-90 0 0">
+            </a-plane>
         </a-marker>
 
         <!---->
         <a-marker id='frac2' type='pattern' url='marker/pt-frac2.patt'>
-            <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:blue;'>
-                <a-torus-knot radius='0.26' radius-tubular='0.05'>
-                    <a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-                </a-torus-knot>
-            </a-box>
-        </a-marker>
-
-        <!---->
-        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt'>
-            <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>
-                <a-torus-knot radius='0.26' radius-tubular='0.05'>
-                    <a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-                </a-torus-knot>
-            </a-box>
-        </a-marker>
-
-        <!-- Disponibilitá -->
-        <a-marker id='frac4' type='pattern' url='marker/pt-frac4.patt'>
-            <a-plane src="assets/disponibilita_trans.png" width="7" height="10" rotation="-90 0 0" position="5 0 0">
+            <a-plane src="assets/disponibilita2.jpg" scale="1 1 1" height="2.5" width="2" rotation="-90 0 0" position="0 0 0">
             </a-plane>
-            <a-text value="Disponibilita
-            de Antonio Peticov" color="black" width="4" position="0 0.5 4"
-                rotation="-90 0 0"></a-text>
         </a-marker>
+
+        <!--Vídeo-->
+        <a-assets>
+            <video id="vid" src="assets/video-peticov.mp4" loop="true" crossorigin>
+        </a-assets>
+        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt' vidhandler>
+            <a-plane position='0 0 0' scale="2 2 2" width="1.5" rotation="-90 0 0" material='transparent:true;src:#vid'></a-plane>
+        </a-marker>
+
+        <!-- -->
+        <a-marker id='frac4' type='pattern' url='marker/pt-frac4.patt'>
+            
+        </a-marker>
+
 
         <a-camera-static />
     </a-scene>
+
 </body>
 
 </html>
