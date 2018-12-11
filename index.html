@@ -86,14 +86,14 @@
 
             <a-plane color="white" width="3" position="-8 0.5 -1" rotation="-90 0 0"></a-plane>
             <a-text value="Obra: Quadrado Magico 
-            Antonio Peticov" align="center" color="black" width="5" position="-8 0.8 -1"
-                rotation="-90 0 0"></a-text>
+            Antonio Peticov" align="center" color="black" width="5"
+                position="-8 0.8 -1" rotation="-90 0 0"></a-text>
         </a-marker>
 
         <!--Disponibilitá-->
         <a-marker id='frac1' type='pattern' url='marker/pt-frac1.patt'>
             <a-plane color="white" width="3" position="4.5 1 0" rotation="-90 0 0"></a-plane>
-            <a-text value="Obra: “Disponibilita.” ( 1981)
+            <a-text value="Obra: “Disponibilita.” (1981)
             Antonio Peticov" align="center" color="black"
                 width="5" position="4.5 1.1 0" rotation="-90 0 0"></a-text>
 
@@ -117,7 +117,13 @@
 
         <!-- -->
         <a-marker id='frac4' type='pattern' url='marker/pt-frac4.patt'>
-            
+            <a-box id='lab' src="assets/labirinto.jpg" scale="2 2 2">
+                <a-animation attribute="rotation" dur="10000" fill="forwards" to="360 0 0" repeat="indefinite"></a-animation>
+            </a-box>
+            <a-plane color="white" width="3" position="4 1 0" rotation="-90 0 0"></a-plane>
+            <a-text value="Obra: “Labirinto.” (1984)
+            Antonio Peticov" align="center" color="black"
+                width="5" position="4 1.1 0" rotation="-90 0 0"></a-text>
         </a-marker>
 
 
