@@ -10,8 +10,6 @@
     <!-- AR.js stuff-->
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-ar.js"></script>
-    <script src="js/threex-portal-door.js"></script>
-    <script src="js/aframe-portal-door.js"></script>
     <!-- end AR.js specific scripts -->
 
     <script>
@@ -79,7 +77,7 @@
 
 
     <a-scene antialias="true" embedded arjs='sourceType: webcam; trackingMethod: best; debugUIEnabled: false;'>
-        <!-- quadrado -->
+        <!-- Quadrado Mágico -->
         <a-marker id='cite' type='pattern' url='marker/pt-cite.patt'>
             <a-plane src="assets/quadrado-magico-kami.jpg" scale="7.3 7.3 7.3" rotation="-90 0 0" position="0 0 -3">
             </a-plane>
@@ -93,17 +91,17 @@
         <!--Disponibilitá-->
         <a-marker id='frac1' type='pattern' url='marker/pt-frac1.patt'>
             <a-plane color="white" width="3" position="4.5 1 0" rotation="-90 0 0"></a-plane>
-            <a-text value="Obra: “Disponibilita.” (1981)
-            Antonio Peticov" align="center" color="black"
-                width="5" position="4.5 1.1 0" rotation="-90 0 0"></a-text>
+            <a-text value="Obra: “Disponibilita” (1981)
+            Antonio Peticov" align="center" color="black" width="5"
+                position="4.5 1.1 0" rotation="-90 0 0"></a-text>
 
             <a-plane src="assets/disponibilita.jpg" width="3.8" height="5.1" rotation="-90 0 0">
             </a-plane>
         </a-marker>
 
-        <!---->
+        <!--Ladder-->
         <a-marker id='frac2' type='pattern' url='marker/pt-frac2.patt'>
-            <a-plane src="assets/disponibilita2.jpg" scale="1 1 1" height="2.5" width="2" rotation="-90 0 0" position="0 0 0">
+            <a-plane src="assets/ladder.png" scale="2 2 2" height="2.5" width="2" rotation="0 0 0" position="0 2 0">
             </a-plane>
         </a-marker>
 
@@ -111,19 +109,19 @@
         <a-assets>
             <video id="vid" src="assets/video-peticov.mp4" loop="true" crossorigin>
         </a-assets>
-        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt' vidhandler>
+        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt' vidhandler allow="autoplay">
             <a-plane position='0 0 0' scale="2 2 2" width="1.5" rotation="-90 0 0" material='transparent:true;src:#vid'></a-plane>
         </a-marker>
 
-        <!-- -->
-        <a-marker id='frac4' type='pattern' url='marker/pt-frac4.patt'>
-            <a-box id='lab' src="assets/labirinto.jpg" scale="2 2 2">
-                <a-animation attribute="rotation" dur="10000" fill="forwards" to="360 0 0" repeat="indefinite"></a-animation>
-            </a-box>
-            <a-plane color="white" width="3" position="4 1 0" rotation="-90 0 0"></a-plane>
-            <a-text value="Obra: “Labirinto.” (1984)
-            Antonio Peticov" align="center" color="black"
-                width="5" position="4 1.1 0" rotation="-90 0 0"></a-text>
+        <!-- Labirinto -->
+        <a-marker id='frac4' type='pattern' url='marker/pt-frac4.patt' markerhandler emitevents="true" cursor="rayOrigin: mouse">
+            <a-plane id='lab' src="assets/labirinto.jpg" scale="2 2 2" rotation="-90 0 0">
+                <a-animation attribute="rotation" dur="10000" fill="forwards" to="-90 360 0" repeat="indefinite"></a-animation>
+            </a-plane>
+            <a-plane color="white" width="3" position="3 0 0" rotation="-90 0 0"></a-plane>
+            <a-text value="Obra: “Labirinto” (1984)
+            Antonio Peticov" align="center" color="black" width="5"
+                position="3 0.1 0" rotation="-90 0 0"></a-text>
         </a-marker>
 
 
