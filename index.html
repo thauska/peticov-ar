@@ -6,6 +6,8 @@
     <meta http-equiv="Content-Language" content="pt-br">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
     <title>Festival de Matemática e Arte 2018</title>
     <!-- AR.js stuff-->
     <script src="js/aframe.min.js"></script>
@@ -107,9 +109,9 @@
 
         <!--Vídeo-->
         <a-assets>
-            <video id="vid" src="assets/video-peticov.mp4" loop="true" crossorigin>
+            <video id="vid" src="assets/video-peticov.mp4" loop="true" crossorigin allow="autoplay">
         </a-assets>
-        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt' vidhandler allow="autoplay">
+        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt' vidhandler >
             <a-plane position='0 0 0' scale="2 2 2" width="1.5" rotation="-90 0 0" material='transparent:true;src:#vid'></a-plane>
         </a-marker>
 
