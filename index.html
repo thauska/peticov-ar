@@ -24,10 +24,8 @@
                     }else{ this.toggle = false; this.vid.pause(); } } }); 
                     function refrespage() { 
                         location.reload(); 
-                    } 
-            
+                    }           
     </script>
-
 
 
     <style>
@@ -99,14 +97,14 @@
 
         <!--Vídeo-->
         <a-assets>
-            <video id="vid" src="assets/video-peticov.mp4" loop="true" crossorigin autoplay="">
+            <video id="vid" src="assets/video-peticov.mp4" loop="true" crossorigin webkit-playsinline autoplay="">
         </a-assets>
-        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt' vidhandler>
+        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt' vidhandler markerhandler emitevents="true" cursor="rayOrigin: mouse">
             <a-plane position='0 0 0' scale="2 2 2" width="1.5" rotation="-90 0 0" material='transparent:true;src:#vid'></a-plane>
         </a-marker>
 
         <!-- Labirinto -->
-        <a-marker id='frac4' type='pattern' url='marker/pt-frac4.patt' markerhandler emitevents="true" cursor="rayOrigin: mouse">
+        <a-marker id='frac4' type='pattern' url='marker/pt-frac4.patt'>
             <a-plane id='lab' src="assets/labirinto.jpg" scale="2 2 2" rotation="-90 0 0">
                 <a-animation attribute="rotation" dur="10000" fill="forwards" to="-90 360 0" repeat="indefinite"></a-animation>
             </a-plane>
