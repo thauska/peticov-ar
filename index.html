@@ -13,22 +13,6 @@
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-ar.js"></script>
     <!-- end AR.js specific scripts -->
-    <script src="play-on-window-click.js"></script>
-
-    <script>
-    AFRAME.registerComponent('vidhandler', { // ... 
-        init: function () { // Set up initial state and variables.
-            this.toggle = false; this.vid = document.querySelector("#vid");
-            this.vid.pause(); }, tick:function(){ 
-                if(this.el.object3D.visible == true){ 
-                    if(!this.toggle){ this.toggle = true; this.vid.click } 
-                }else{ this.toggle = false; this.vid.pause(); } } }
-                ); 
-                function refrespage() { 
-                    location.reload(); 
-                }    
-    </script>
-
 
     <style>
         .a-enter-vr {
@@ -98,11 +82,10 @@
         </a-marker>
 
         <!--Vídeo-->
-        <a-assets>
-            <video id="vid"  loop="true" crossorigin webkit-playsinline> <source type="video/mp4" src="assets/video-peticov.mp4" /> </video>
-        </a-assets>
-        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt' vidhandler>            
-            <a-plane position='0 0 0' scale="2 2 2" width="1.5" rotation="-90 0 0" material='transparent:true;src:#vid' play-on-window-click></a-plane>
+
+        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt'>
+            <a-plane src="assets/the-window-ii.png" scale="2 2 2" height="2.5" width="2" rotation="-90 0 0">                
+            </a-plane>
         </a-marker>
 
         <!-- Labirinto -->
