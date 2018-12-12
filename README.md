@@ -1,4 +1,4 @@
 # FestMA
-Projects in AR for Mathematics and Art Festival from Federal University of Pará
+AR Project for Maths and Art Festival from UFPA
 
 Made with AFrame & AR.js 
