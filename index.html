@@ -34,6 +34,30 @@
         }
     </style>
 
+    <script>
+        AFRAME.registerComponent('vidhandler', {      
+        // ...
+        init: function () {       
+        // Set up initial state and variables.
+            this.toggle = false;            
+            this.vid = document.querySelector("#vid")
+            this.vid.pause();            
+            },
+            tick:function(){
+                          
+            if(this.el.object3D.visible == true){           
+              if(!this.toggle){
+                 this.toggle = true;                 
+                 this.vid.play();
+                }               
+              }else{
+              this.toggle = false;             
+                this.vid.pause();
+                }              
+              }
+            });           
+   </script>
+
 </head>
 
 <body style="margin:0px; overflow:hidden;">
@@ -55,7 +79,7 @@
     <a-scene antialias="true" embedded arjs='sourceType: webcam; trackingMethod: best; debugUIEnabled: false;'>
         <!-- Quadrado Mágico -->
         <a-marker id='cite' type='pattern' url='marker/pt-cite.patt'>
-            <a-plane src="assets/quadrado-magico-kami.jpg" scale="7.3 7.3 7.3" rotation="-90 0 0" position="0 0 -3">
+            <a-plane src="assets/quadrado-magico-black.jpg" scale="7.3 7.3 7.3" rotation="-90 0 0" position="0 0 -3">
             </a-plane>
 
             <a-plane color="white" width="3" position="-8 0.5 -1" rotation="-90 0 0"></a-plane>
@@ -82,10 +106,12 @@
         </a-marker>
 
         <!--Vídeo-->
+        <a-assets>
+            <video id="vid" src="assets/peticov_animation.mp4" loop="true" crossorigin muted="muted"></video>
+        </a-assets>
 
-        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt'>
-            <a-plane src="assets/the-window-ii.png" scale="2 2 2" height="2.5" width="2" rotation="-90 0 0">                
-            </a-plane>
+        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt' vidhandler>
+            <a-plane position='0 0 0' scale="2 2 2" width="1.5" rotation="-90 0 0" material='transparent:true;src:#vid'></a-plane>
         </a-marker>
 
         <!-- Labirinto -->
