@@ -12,7 +12,7 @@ To try it on your phone, it is only 2 easy steps, check it out!
 - [marker Sierpinski Carpet](https://github.com/thauska/FestMA/blob/master/marker/marker-frac4.png)
 2. Open this [augmented reality webapps](https://thauska.github.io/FestMA/) in your phone browser, and point it at your screen.
 
-**You are done!** It will open a webpage which read the phone webcam, localize the custom marker and add the art of [Antonio Peticov](https://pt.wikipedia.org/wiki/Antonio_Peticov). Each custom marker will have an different object appearing.
+**You are done!** It will open a webpage which read the phone camera, localize the custom marker and add the art of [Antonio Peticov](https://pt.wikipedia.org/wiki/Antonio_Peticov). Each custom marker will have an different object appearing.
 Two examples as you can see below.
 
 ![screenshot](https://github.com/thauska/FestMA/blob/master/images/webappFestMA.jpeg)
