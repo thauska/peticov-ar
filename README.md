@@ -1,7 +1,7 @@
 # FestMA
 AR WebApps for Maths and Art Festival from UFPA.
 
-### Try it on Mobile
+## Try it on Mobile
 
 To try it on your phone, it is only 2 easy steps, check it out!
 1. Open one of the custom markers. There're five custom markers:
