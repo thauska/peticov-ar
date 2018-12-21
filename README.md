@@ -5,7 +5,7 @@ AR WebApps for Maths and Art Festival from UFPA.
 
 To try it on your phone, it is only 2 easy steps, check it out!
 1. Open one of the custom markers. There're five custom markers:
-- [marker logo of cite](https://github.com/thauska/FestMA/blob/master/marker/marker-cite.png)
+- [marker logo of CITE](https://github.com/thauska/FestMA/blob/master/marker/marker-cite.png)
 - [marker Pythagoras Tree](https://github.com/thauska/FestMA/blob/master/marker/marker-frac1.png)
 - [marker Fractal Pentagonal](https://github.com/thauska/FestMA/blob/master/marker/marker-frac2.png)
 - [marker Sierpinski Triangle](https://github.com/thauska/FestMA/blob/master/marker/marker-frac3.png)
