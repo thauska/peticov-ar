@@ -1,7 +1,7 @@
 # FestMA
 AR WebApps for Maths and Art Festival from UFPA.
 
-# Try it on Mobile
+### Try it on Mobile
 
 To try it on your phone, it is only 2 easy steps, check it out!
 1. Open one of the custom markers. There're five custom markers:
@@ -20,7 +20,7 @@ Two examples as you can see below.
 ![screenshot](https://github.com/thauska/FestMA/blob/master/images/theladder.jpeg)
 
 
-# Acknowledgment
+### Acknowledgment
 
 **Made with [AFrame](https://aframe.io/docs/0.8.0/introduction/) & [AR.js](https://github.com/jeromeetienne/AR.js)**
 
