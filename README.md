@@ -24,6 +24,7 @@ Two examples as you can see below.
 
 **Made with [AFrame](https://aframe.io/docs/0.8.0/introduction/) & [AR.js](https://github.com/jeromeetienne/AR.js)**
 
-Special thanks for: 
+Special thanks for:
+- Cristina Vaz for trust me,
 - Romulo Gabriel [@yemolai](https://github.com/Yemolai) by encouraging study, and
 - [Victor Almeida](https://twitter.com/CondeNerd) for helping me with design! <3
