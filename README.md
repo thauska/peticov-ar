@@ -28,3 +28,4 @@ Special thanks for:
 - Cristina Vaz, my coordinator, for trusting me,
 - Romulo Gabriel [@yemolai](https://github.com/Yemolai) by encouraging study, and
 - [Victor Almeida](https://twitter.com/CondeNerd) for helping me with design! <3
+- [Patrick Monteiro](https://github.com/patrickmonteiro) for helping me with integration with Quasar Framework!
