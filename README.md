@@ -1,7 +1,17 @@
 # FestMA
-AR WebApps for Maths and Art Festival from UFPA.
 
-## Try it on Mobile
+## Aplicação apresentada no II Workshop em Criatividade, Inovação e Inteligência Artificial da Universidade Federal do Pará 
+
+[Acesse o site do evento, clicando aqui](http://criar.ufpa.br/submissoes.html)
+
+[Slide da apresentação disponível aqui](https://slides.com/thayanamamore/peticovra#/)
+
+***
+
+
+## AR WebApps for Maths and Art Festival from UFPA.
+
+### Try it on Mobile
 
 To try it on your phone, it is only 2 easy steps, check it out!
 1. Open one of the custom markers. There're five custom markers:
