@@ -3,15 +3,8 @@
     <router-view />
   </div>
 </template>
-
 <script>
 export default {
-  name: 'App',
-  created () {
-    // this.$q.addressbarColor.set('#000000')
-  }
+  name: 'App'
 }
 </script>
-
-<style>
-</style>
