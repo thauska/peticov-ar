@@ -1,4 +1,4 @@
-# FestMA (festma)
+# Peticov's Art in AR (peticov-ar)
 ### Try it on Mobile
 
 To try it on your phone, it is only 2 easy steps, check it out!
