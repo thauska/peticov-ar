@@ -10,7 +10,8 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "deploy": "push-dir --dir=dist/pwa --remote=gh-pages --branch=quasar-festma"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
@@ -31,6 +32,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.1.2",
+    "push-dir": "^0.4.1",
     "workbox-webpack-plugin": "^5.0.0"
   },
   "browserslist": [
