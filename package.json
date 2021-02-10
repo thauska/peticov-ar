@@ -11,7 +11,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0",
-    "deploy": "push-dir --dir=dist/pwa --remote=gh-pages --branch=quasar-festma"
+    "deploy": "push-dir --dir=dist/pwa --remote=gh-pages --branch=master"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
