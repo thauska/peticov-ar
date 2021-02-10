@@ -8,9 +8,3 @@ export default {
   name: 'App'
 }
 </script>
-<style>
-#q-app {
-  margin: 0 !important;
-  overflow: hidden;
-}
-</style>
