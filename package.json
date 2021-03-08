@@ -9,11 +9,11 @@
   ],
   "private": true,
   "scripts": {
+    "dev": "quasar dev",
     "build": "quasar build",
     "build:pwa": "quasar build -m pwa",
     "lint": "eslint --ext .js,.vue ./",
-    "test": "echo \"No test specified\" && exit 0",
-    "deploy": "push-dir --dir=dist/pwa --branch=gh-pages"
+    "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
