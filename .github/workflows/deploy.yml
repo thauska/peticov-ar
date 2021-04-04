@@ -1,0 +1,42 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      
+      # Install Quasar
+      - name: Install Quasar
+        run: npm install -g @quasar/cli
+      
+      # Install dependencies
+      - name: Install dependencies
+        run: yarn install
+      
+      # Build application
+      - name: Build
+        run: yarn build:pwa
+      
+      # Deploy built application to GitHub pages branch
+      - name: Deploy to GitHub Pages
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git checkout --orphan gh-pages
+          git --work-tree dist/pwa add --all
+          git --work-tree dist/pwa commit -m 'Deploy'
+          git push origin HEAD:gh-pages --force
+          rm -r dist/pwa
+          git checkout -f master
+          git branch -D gh-pages
