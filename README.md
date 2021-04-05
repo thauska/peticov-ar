@@ -21,5 +21,6 @@ Two examples as you can see below.
 
 Special thanks for:
 - Romulo Gabriel [@yemolai](https://github.com/Yemolai) by encouraging study
-- [Patrick Monteiro](https://github.com/patrickmonteiro) for helping me with integration with Quasar Framework!, and
+- [Patrick Monteiro](https://github.com/patrickmonteiro) for helping me with integration with Quasar Framework!
 - [Victor Almeida](https://twitter.com/CondeNerd) for helping me with design! <3
+- [Diego Souza](https://github.com/Fayhen) for teaching me about gitflow actions.
