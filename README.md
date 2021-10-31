@@ -8,12 +8,14 @@ To try it on your phone, it is only 2 easy steps, check it out!
 - [marker Fractal Pentagonal](https://raw.githubusercontent.com/thauska/peticov-ar/purehtml/marker/marker-frac2.png)
 - [marker Sierpinski Triangle](https://raw.githubusercontent.com/thauska/peticov-ar/purehtml/marker/marker-frac3.png)
 - [marker Sierpinski Carpet](https://raw.githubusercontent.com/thauska/peticov-ar/purehtml/marker/marker-frac4.png)
-2. Open this [augmented reality webapps](https://thauska.github.io/peticov-ar/) in your phone browser, and point it at your screen.
 
-**You are done!** It will open a webpage which read the phone camera, localize the custom marker and add the art of [Antonio Peticov](https://pt.wikipedia.org/wiki/Antonio_Peticov). Each custom marker will have an different object appearing.
-Two examples as you can see below.
+- Or, download, print all and cut each one, [clicking here](https://github.com/thauska/peticov-ar/files/7375473/marcadores-para-impressao.pdf).
+<br />
+2. Open this [augmented reality webapps](https://thauska.github.io/peticov-ar/) in your phone browser, and point it at one of the markers.
 
-![webappFestMA](https://user-images.githubusercontent.com/8525721/107549098-2db12e00-6bae-11eb-8ae6-644260c851a1.jpeg)
+**You are done!** It will open a webpage which read the phone camera, localize the custom marker and add the art of [Antonio Peticov](https://pt.wikipedia.org/wiki/Antonio_Peticov). Each custom marker will have an different object appearing, just as the examples you can see below.
+
+![webappPeticovAR](https://user-images.githubusercontent.com/8525721/107549098-2db12e00-6bae-11eb-8ae6-644260c851a1.jpeg)
 ![theladder](https://user-images.githubusercontent.com/8525721/107549041-1d00b800-6bae-11eb-9ec4-781866859248.jpeg)
 ### Acknowledgment
 
