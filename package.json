@@ -1,7 +1,7 @@
 {
   "name": "peticov-ar",
   "version": "0.0.1",
-  "description": "The art of Antônio Peticov with Augmented Reality",
+  "description": "Antônio Peticov's art in Augmented Reality",
   "productName": "Peticov's Art in AR",
   "author": "Thayana Corrêa Mamoré <thayanacmamore@gmail.com>",
   "contributors": [
@@ -10,15 +10,21 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
+    "dev:pwa": "quasar dev -m pwa",
     "build": "quasar build",
     "build:pwa": "quasar build -m pwa",
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
+    "@quasar/extras": "^1.11.2",
+    "aframe": "^1.2.0",
+    "@ar-js-org/ar.js": "https://github.com/AR-js-org/AR.js.git#c73e90d9732efa84b6d68a51710887ab98d9da5f",
+    "arjs-gestures": "https://github.com/fcor/arjs-gestures.git",
     "axios": "^0.21.1",
+    "browserify-css": "*",
     "core-js": "^3.6.5",
+    "envify": "*",
     "quasar": "^1.0.0",
     "vue-i18n": "^8.0.0"
   },

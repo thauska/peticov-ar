@@ -1,5 +1,5 @@
 /* app global css */
-body {
-    margin: 0 !important;
+body.arjs {
+    margin: 0px;
     overflow: hidden;
 }

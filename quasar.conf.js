@@ -6,6 +6,9 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 /* eslint-env node */
+if (process.browser) {
+  require('aframe')
+}
 
 module.exports = function (/* ctx */) {
   return {
@@ -21,7 +24,7 @@ module.exports = function (/* ctx */) {
     boot: [
       'i18n',
       'axios',
-      'vue.ignore'
+      'vue.config'
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -120,13 +123,13 @@ module.exports = function (/* ctx */) {
         clientsClaim: true
       }, // only for GenerateSW
       manifest: {
-        name: 'FestMA',
-        short_name: 'FestMA',
-        description: 'AR Project for Maths and Art Festival from UFPA with Quasar Framework',
+        name: 'PeticovAR',
+        short_name: 'PeticovAR',
+        description: 'The Arts of Peticov in Augmented Reality with Quasar Framework',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
-        theme_color: '#027be3',
+        theme_color: '#9c27b0',
         icons: [
           {
             src: 'icons/icon-128x128.png',
@@ -187,7 +190,7 @@ module.exports = function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'festma'
+        appId: 'PeticovAR'
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration

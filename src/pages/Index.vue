@@ -1,81 +1,54 @@
 <template>
-  <q-page class="container">
-    <a-scene vr-mode-ui="enabled: false" embedded arjs='sourceType: webcam; trackingMethod: best; debugUIEnabled: false;'>
-
-        <!-- Quadrado Mágico -->
-        <a-marker id='cite' type='pattern' url='marker/pt-cite.patt'>
-            <a-plane src="assets/quadrado-magico-black.jpg" scale="7.3 7.3 7.3" rotation="-90 0 0" position="0 0 -3">
-            </a-plane>
-
-            <a-plane color="white" width="3" position="-8 0.5 -1" rotation="-90 0 0"></a-plane>
-            <a-text value="Obra: Quadrado Magico Antonio Peticov" align="center" color="black" width="5" position="-8 0.8 -1" rotation="-90 0 0"></a-text>
-        </a-marker>
-
-        <!--Disponibilitá-->
-        <a-marker id='frac1' type='pattern' url='marker/pt-frac1.patt'>
-            <a-plane color="white" width="3" position="4.5 1 0" rotation="-90 0 0"></a-plane>
-            <a-text value="Obra: “Disponibilita” (1981)
-                    Antonio Peticov" align="center" color="black"
-                width="5" position="5 1.1 0" rotation="-90 0 0"></a-text>
-
-            <a-plane src="assets/disponibilita.jpg" width="3.8" height="5.1" rotation="-90 0 0">
-            </a-plane>
-        </a-marker>
-
-        <!--Ladder-->
-        <a-marker id='frac2' type='pattern' url='marker/pt-frac2.patt'>
-            <a-plane src="assets/ladder.png" scale="2 2 2" height="2.5" width="2" rotation="-8 0 0" position="0 0 -1.5">
-            </a-plane>
-        </a-marker>
-
-        <!-- Vídeo -->
-        <a-assets>
-          <video id="peticov_animation" autoplay loop="true" src="assets/peticov_animation.mp4"></video>
-        </a-assets>
-        <a-marker id='frac3' type='pattern' url='marker/pt-frac3.patt'>
-            <a-video src="#peticov_animation" position='0 1 0' scale="2 2 2" width="1.5" rotation="-90 0 0" webkit-playsinline playsinline>
-            </a-video>
-        </a-marker>
-
-        <!-- Labirinto -->
-        <a-marker id='frac4' type='pattern' url='marker/pt-frac4.patt'>
-            <a-plane id='lab' src="assets/labirinto.jpg" scale="2 2 2" rotation="-90 0 0" animation="property: rotation; to: -90 360 0; dur: 2000; easing: linear; loop: true">
-            </a-plane>
-            <a-plane color="white" width="3" position="3 0 0" rotation="-90 0 0"></a-plane>
-            <a-text value="Obra: “Labirinto” (1984)
-                    Antonio Peticov" align="center" color="black"
-                    width="5" position="3 0.1 0" rotation="-90 0 0"></a-text>
-        </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
+<q-page-container>
+  <q-page padding class="flex justify-center">
+    <div class="q-pa-md">
+      <div class="column items-center">
+        <div class="col q-mb-sm">
+          <img alt="Quadrado Mágico" src="assets/quadrado-magico-kami.jpg" width="150px" >
+        </div>
+        <div class="col q-pt-md">
+          <p class="text-h4 text-bold text-black text-center">
+              <span class="bottom-dotted">Antônio Peticov's</span> art in Augmented Reality
+              <q-tooltip anchor="top left" self="center middle">
+                Antonio Peticov (born July 2, 1946) is a Brazilian painter, designer, sculptor, and engraver.
+              </q-tooltip>
+          </p>
+        </div>
+        <div class="col text-justify">
+          <p class="text-body1">For usage instructions, click on the button <span><q-icon size="sm" name="info" /></span> from the navigation bar.</p>
+        </div>
+        <div class="col q-pa-md">
+          <q-btn color="purple" glossy
+            class="q-mt-xs text-no-wrap"
+            push
+            label="Iniciar realidade aumentada"
+            to="/ar"
+          />
+      </div>
+      </div>
+    </div>
   </q-page>
+</q-page-container>
 </template>
 
 <script>
 export default {
-  name: 'PageIndex',
-  mounted () {
-    const m = document.querySelector('a-marker#frac3')
-    m.addEventListener('markerFound', (e) => {
-      const entity = document.querySelector('video')
-      entity.play()
-      console.log('found')
-    })
-    m.addEventListener('markerLost', (e) => {
-      const entity = document.querySelector('video')
-      entity.pause()
-      console.log('lost')
-    })
-  }
+  name: 'PageIndex'
 }
 </script>
 
-<style>
-a-scene {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+<style scoped>
+.bottom-dotted {
+  border-bottom: 1px dotted #000;
+}
+@media (min-width: 768px) {
+  .text-h4 {
+    font-size: 2rem
+  }
+}
+@media (max-width: 768px) {
+  .text-h4 {
+    font-size: 1.8rem
+  }
 }
 </style>
