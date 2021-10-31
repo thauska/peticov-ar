@@ -62,9 +62,9 @@ import readme from '../../README.md'
 const linksData = [
   {
     title: 'Github',
-    caption: 'https://github.com/thauska/FestMA',
+    caption: 'https://github.com/thauska/peticov-ar',
     icon: 'fab fa-github',
-    link: 'https://github.com/thauska/FestMA'
+    link: 'https://github.com/thauska/peticov-ar'
   }
 ]
 
@@ -74,10 +74,7 @@ export default {
   data () {
     return {
       readme: readme,
-      leftDrawerOpen: this.$q.platform.is.desktop,
       dialog: false,
-      drawerLeft: false,
-      drawerRight: true,
       essentialLinks: linksData
     }
   }
