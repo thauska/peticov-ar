@@ -8,20 +8,24 @@
         </div>
         <div class="col q-pt-md">
           <p class="text-h4 text-bold text-black text-center">
-              <span class="bottom-dotted">Antônio Peticov's</span> art in Augmented Reality
+              <span class="bottom-dotted">{{$t('name')}}</span> {{$t('art')}} {{$t('in')}}
+
+              <span v-if="this.$i18n.locale === 'en-us'"> {{$t('augumented')}} {{$t('reality')}}</span>
+              <span v-else>{{$t('reality')}} {{$t('augumented')}}</span>
+
               <q-tooltip anchor="top left" self="center middle">
-                Antonio Peticov (born July 2, 1946) is a Brazilian painter, designer, sculptor, and engraver.
+                {{$t('subtitleInfo')}}
               </q-tooltip>
           </p>
         </div>
         <div class="col text-justify">
-          <p class="text-body1">For usage instructions, click on the button <span><q-icon size="sm" name="info" /></span> from the navigation bar.</p>
+          <p class="text-body1">{{$t('usageInfoPartOne')}} <span><q-icon size="sm" name="info" /></span> {{$t('usageInfoPartTwo')}}</p>
         </div>
         <div class="col q-pa-md">
           <q-btn color="purple" glossy
             class="q-mt-xs text-no-wrap"
             push
-            label="Iniciar realidade aumentada"
+            :label="$t('startAugmentedReality')"
             to="/ar"
           />
       </div>

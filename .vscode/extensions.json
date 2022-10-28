@@ -1,9 +1,5 @@
 {
-  "recommendations": [
-    "dbaeumer.vscode-eslint",
-    
-    "octref.vetur"
-  ],
+  "recommendations": ["dbaeumer.vscode-eslint", "octref.vetur"],
   "unwantedRecommendations": [
     "hookyqr.beautify",
     "dbaeumer.jshint",
