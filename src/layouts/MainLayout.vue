@@ -8,7 +8,7 @@
         </q-toolbar-title>
 
         <q-btn flat round dense icon="info" @click="dialog = true" />
-
+        <toggle-language class="q-ml-sm"/>
       </q-toolbar>
     </q-header>
 
@@ -57,6 +57,7 @@
 
 <script>
 import EssentialLink from 'components/EssentialLink.vue'
+import ToggleLanguage from 'components/ToggleLanguage.vue'
 import readme from '../../README.md'
 
 const linksData = [
@@ -70,7 +71,7 @@ const linksData = [
 
 export default {
   name: 'MainLayout',
-  components: { EssentialLink },
+  components: { EssentialLink, ToggleLanguage },
   data () {
     return {
       readme: readme,
